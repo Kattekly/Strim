@@ -92,3 +92,18 @@ const easyFind = (arr, fn) => {
 
 console.log(easyFind(students, el => el.name === "Alex"))
 console.log(students.find(el => el.name === "Alex"))
+
+const easyJoin = (arr, separator = "," ) => {
+    let result = ""
+    for (let i = 0; i < arr.length; i++) {
+        if(i < arr.length -1) {
+            result += arr[i]+separator
+        } else
+      result += arr[i]
+    }
+    return result
+}
+console.log(easyJoin(["Bob", "Alex", "Nuck"]))
+console.log(easyJoin(["Bob", "Alex", "Nuck"], " "))
+console.log(["Bob", "Alex", "Nuck"].join())
+console.log(["Bob", "Alex", "Nuck"].join(' '))
