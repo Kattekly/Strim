@@ -96,3 +96,8 @@ const sts = {
         scores: 89
     }
 }
+console.log(students.reduce((acc, el) => {
+    acc[el.name] = {...el}
+    delete acc[el.name].name
+    return acc
+}, {}))
