@@ -18,5 +18,7 @@ const todoList = [
 
 const tasks = {
     [todoListId1]: [],
-    [todoListId2]: []
+    [todoListId2]: [],
+        ["user name"]: "Bob"
 }
+console.log(tasks["user name"])
