@@ -29,3 +29,5 @@ const tasks = {
 }
 console.log([...tasks[todoListId1], {id: "14", title: "REDAX", isDone: false}])
 console.log(tasks[todoListId1].find(t => t.id === "21"))
+console.log(tasks[todoListId1][2].title)
+console.log(tasks[todoListId1][2]["title"])
