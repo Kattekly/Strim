@@ -76,3 +76,10 @@ console.log(students.reduce((acc, el) => {
     acc.push(updateStydent)
     return acc
 },[])) // вместо мапа, + 10 каждому ученику
+
+console.log(students.reduce((acc, el) => {
+    if(el.scores >= 100) {
+        acc.push(el)
+    }
+    return acc
+}, [])) //вместо фильтра. ученики у кого больше 100 баллов
