@@ -1,3 +1,5 @@
+import {log} from "util";
+
 const todoListId1 = "1"
 const todoListId2 = "2"
 
@@ -34,3 +36,37 @@ console.log(tasks[todoListId1][2]["title"])
 console.log(tasks[todoList[1]["id"]][0].title)
 
 const number = [1, 2, 3, 4 ,5]
+console.log(number.reduce((acc, el)=> {
+    return acc + el
+}, 0)) // сумма всех элементов массива
+
+console.log(number.reduce((acc, el) => acc > el ? acc: el)) // max
+
+let students = [
+    {
+        name: "Bob",
+        age: 22,
+        isMarried: true,
+        scores: 85
+    },
+    {
+        name: "Alex",
+        age: 21,
+        isMarried: true,
+        scores: 89
+    },
+    {
+        name: "Nick",
+        age: 20,
+        isMarried: false,
+        scores: 120
+    },
+    {
+        name: "John",
+        age: 25,
+        isMarried: false,
+        scores: 100
+    }
+];
+
+console.log(students.sort())
