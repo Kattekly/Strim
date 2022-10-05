@@ -1,4 +1,4 @@
-import {log} from "util";
+
 
 const todoListId1 = "1"
 const todoListId2 = "2"
@@ -69,4 +69,10 @@ let students = [
     }
 ];
 
-console.log(students.sort())
+console.log(students.reduce((acc, el) => acc.scores > el.scores ? acc: el)) // вывести ученика с самым большим баллом
+
+console.log(students.reduce((acc, el) => {
+    const updateStydent = {...el, scores: el.scores + 10}
+    acc.push(updateStydent)
+    return acc
+},[])) // вместо мапа, + 10 каждому ученику
