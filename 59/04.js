@@ -1,14 +1,22 @@
+const todoListId1 = "1"
+const todoListId2 = "2"
+
 const todoList = [
     {
-        id: "1",
+        id: todoListId1,
         title: "What to learn",
         filter: "all",
         tasks: []
     },
     {
-        id: "2",
+        id: todoListId2,
         title: "What to buy",
         filter: "all",
         tasks: []
     }
 ]
+
+const tasks = {
+    [todoListId1]: [],
+    [todoListId2]: []
+}
