@@ -83,3 +83,16 @@ console.log(students.reduce((acc, el) => {
     }
     return acc
 }, [])) //вместо фильтра. ученики у кого больше 100 баллов
+
+const sts = {
+    "Bob": {
+        age: 22,
+        isMarried: true,
+        scores: 85
+    },
+    "Alex": {
+        age: 21,
+        isMarried: true,
+        scores: 89
+    }
+}
