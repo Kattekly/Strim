@@ -33,3 +33,16 @@ const ages = students.sort((a, b) => a.age - b.age)
 console.log(ages)
 const names = students.sort((a,b) => a.name.localeCompare(b.name))
 console.log(names)
+
+const numbers = [0, 4 , 46, 89, 23, 5, 27]
+for (let j = 0; j < numbers.length-1; j++) {
+    let isSorted = true;
+    for (let i = 0; i < numbers.length-1-j; i++) {
+        if (numbers[i] > numbers[i+1]) {
+            isSorted = false;
+            [numbers[i], numbers[i+1]] = [numbers[i+1], numbers[i]]
+        }
+    }
+    if(isSorted)break
+}
+console.log(numbers)
