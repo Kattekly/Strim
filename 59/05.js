@@ -31,3 +31,5 @@ let students = [
 
 const ages = students.sort((a, b) => a.age - b.age)
 console.log(ages)
+const names = students.sort((a,b) => a.name.localeCompare(b.name))
+console.log(names)
