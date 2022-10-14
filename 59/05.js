@@ -34,6 +34,8 @@ console.log(ages)
 const names = students.sort((a,b) => a.name.localeCompare(b.name))
 console.log(names)
 
+// сортировка пузырьком
+
 const numbers = [0, 4 , 46, 89, 23, 5, 27]
 for (let j = 0; j < numbers.length-1; j++) {
     let isSorted = true;
