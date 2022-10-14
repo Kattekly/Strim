@@ -28,3 +28,6 @@ let students = [
         scores: 100
     }
 ];
+
+const ages = students.sort((a, b) => a.age - b.age)
+console.log(ages)
