@@ -48,4 +48,18 @@ function setUpperCase (str) {
 console.log(setUpperCase("всем стУдентам инкуБатора Желаю удачИ!"))
 
 6
+function isIncludes (str, minStr) {
+    let a = str.toLowerCase()
+    let b = minStr.toLowerCase()
+    let i, j
+    for(i = 0; i < str.length; ++i) {
+        for(j = i + 1; j < minStr.length; ++j) {
+            if(str[i] === minStr[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
+console.log(isIncludes("Incubator", "Cut"))
