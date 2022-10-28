@@ -36,3 +36,5 @@ function getMinLengthWord (str) {
 
 console.log(getMinLengthWord("Всем студентам инкубатора желаю удачи!"))
 console.log(getMinLengthWord(""))
+
+5
