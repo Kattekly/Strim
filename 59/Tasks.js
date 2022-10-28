@@ -38,3 +38,14 @@ console.log(getMinLengthWord("Всем студентам инкубатора �
 console.log(getMinLengthWord(""))
 
 5
+function setUpperCase (str) {
+    let row = str.toLowerCase()
+    return row.split(' ').map((el) => {
+        return el[0].toUpperCase() + el.slice(1)
+    }) .join(" ")
+}
+
+console.log(setUpperCase("всем стУдентам инкуБатора Желаю удачИ!"))
+
+6
+
