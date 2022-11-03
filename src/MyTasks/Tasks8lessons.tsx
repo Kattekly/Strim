@@ -2,14 +2,12 @@
 // числа (неопределённое кол-во) и возвращает их сумму (rest).
 
 export function sum(...nums: Array<number>): number {
-    let newSum = 0
-    for (let i = 0; i <= nums[0]; i++) {
-        newSum += i
-    }
+   let newSum =  nums.reduce((acc, el)=> {
+        return acc + el
+    }, 0)
     return newSum
 }
 
-console.log(sum(5))
 
 
 // 2. Функция getTriangleType принимает три параметра:
@@ -48,7 +46,7 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
     return true
 }
 
-// 5. Функция getSquarePositiveIntegers принимает параметром массив чисел и возвращает новый массив. 
+// 5. Функция getSquarePositiveIntegers принимает параметром массив чисел и возвращает новый массив.
 // Новый массив состоит из квадратов целых положительных чисел, котрые являются элементами исходгого массива.
 // Исходный массив не мутирует.
 
