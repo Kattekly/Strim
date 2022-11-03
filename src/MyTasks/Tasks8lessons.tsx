@@ -75,7 +75,7 @@ export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
     let copy = [...array]
     let copy2 = []
     for (let i = 1; i < copy.length; i++) {
-        if (i%2 === 0 && i>0) {
+        if (i%2 === 0 ) {
             copy2.push(i * i)
         }
     }
@@ -110,7 +110,12 @@ console.log(sumFirstNumbers(4))
 
 
 export function getBanknoteList(amountOfMoney: number): Array<number> {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return [1]
+    const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+    let money = []
+    if (amountOfMoney > banknotes[0]) {
+        amountOfMoney - banknotes[0]
+        money.push(banknotes[0])
+    }
+
+    return money
 }
