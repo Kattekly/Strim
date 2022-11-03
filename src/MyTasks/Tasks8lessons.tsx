@@ -9,6 +9,11 @@ export function sum(...nums: Array<number>): number {
 }
 
 
+2
+/*let sum = 0
+nums.forEach(el => sum += el)
+return sum*/
+
 // 2. Функция getTriangleType принимает три параметра:
 // длины сторон треугольника.
 // Функция должна возвращать:
@@ -28,6 +33,12 @@ export function getTriangleType(a: number, b: number, c: number): string {
         return "11"
     } else return "00"
 }
+
+/*
+if ((a+b) <= c || (a+c) <= b || (b+c)<=a) {
+    return "00"
+}
+else*/
 
 // 3. Функция getSum принимает параметром целое число и возвращает
 // сумму цифр этого числа
@@ -72,19 +83,23 @@ console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
 
 
 export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
-    let copy = [...array]
-    let copy2 = []
-    for (let i = 0; i < copy.length; i++) {
-        if (i>= 0) {
-            copy2.push(copy[i])
-        }
-    }
-    return copy2
+  return array.filter(i => i%1==0 && i>0).map(i=> i*i)
 }
 
 console.log(getSquarePositiveIntegers([1, 2, -3]))
 /*copy.filter(el => el > 0 && el%1 == 0).map(el => el*2)*/
 
+
+/*
+let copy = [...array]
+let copy2 = []
+for (let i = 0; i < copy.length; i++) {
+    if (i>= 0) {
+        copy2.push(copy[i])
+    }
+}
+return copy2
+*/
 
 // 6. Функция принимает параметром целое не отрицательное число N и возвращает сумму всех чисел от 0 до N включительно
 // Попробуйте реализовать функцию без использования перебирающих методов.
