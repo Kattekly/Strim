@@ -74,9 +74,9 @@ console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
 export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
     let copy = [...array]
     let copy2 = []
-    for (let i = 1; i < copy.length; i++) {
-        if (i%2 === 0 ) {
-            copy2.push(i * i)
+    for (let i = 0; i < copy.length; i++) {
+        if (i>= 0) {
+            copy2.push(copy[i])
         }
     }
     return copy2
