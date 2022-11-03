@@ -48,20 +48,21 @@ export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
     let sum1 = 0
     let sum2 = 0
     let num = arr
-    for (let i =1; i <num.length; i++) {
-        if (i%2 == 0) {
+    //четные
+    for (let i = 1; i < num.length; i++) {
+        if (i % 2 == 0) {
             sum1 += num[i]
         }
     }
-    for (let i =1; i <num.length; i++) {
-        if (i%2 != 0) {
+    //нечетные
+    for (let i = 1; i < num.length; i++) {
+        if (i % 2 != 0) {
             sum2 += num[i]
         }
     }
     if (sum1 > sum2) {
         return true
-    }
-    else return false
+    } else return false
 }
 console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
 
@@ -71,20 +72,32 @@ console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
 
 
 export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return []
+    let copy = [...array]
+    let copy2 = []
+    for (let i = 1; i < copy.length; i++) {
+        if (i%2 === 0 && i>0) {
+            copy2.push(i * i)
+        }
+    }
+    return copy2
 }
+
+console.log(getSquarePositiveIntegers([1, 2, -3]))
+/*copy.filter(el => el > 0 && el%1 == 0).map(el => el*2)*/
+
 
 // 6. Функция принимает параметром целое не отрицательное число N и возвращает сумму всех чисел от 0 до N включительно
 // Попробуйте реализовать функцию без использования перебирающих методов.
 
 export function sumFirstNumbers(N: number): number {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return 0
+    let sum = 0
+    for (let i = 0; i <= N; i++) {
+        sum += i
+    }
+    return sum
 }
 
+console.log(sumFirstNumbers(4))
 // ...и "лапку" вверх!!!!
 
 

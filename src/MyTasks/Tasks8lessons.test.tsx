@@ -37,6 +37,7 @@ test("get Square Only Of Positive Integers", () => {
     expect(result[0]).toBe(16)
     expect(result[1]).toBe(100)
     expect(result[2]).toBe(36)
+
 })
 test("sum of first N numbers", () => {
     expect(sumFirstNumbers(0)).toBe(0)
