@@ -2,12 +2,11 @@
 // числа (неопределённое кол-во) и возвращает их сумму (rest).
 
 export function sum(...nums: Array<number>): number {
-   let newSum =  nums.reduce((acc, el)=> {
+    let newSum = nums.reduce((acc, el) => {
         return acc + el
     }, 0)
     return newSum
 }
-
 
 
 // 2. Функция getTriangleType принимает три параметра:
@@ -19,21 +18,26 @@ export function sum(...nums: Array<number>): number {
 //  - "00", если такого треугольника не существует.
 
 export function getTriangleType(a: number, b: number, c: number): string {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return ""
+    if (a > b + c) {
+        return "00"
+    } else if (a === b && b === c) {
+        return "10"
+    } else if (a === b || b === c) {
+        return "01"
+    } else if (a != b && b != c) {
+        return "11"
+    } else return "00"
 }
-
 
 // 3. Функция getSum принимает параметром целое число и возвращает
 // сумму цифр этого числа
 
 export function getSum(number: number): number {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return 123
+    let statrtSum = 0
+    let sum = String(number)
+    for (let i = 0; i < sum.length; i++) statrtSum += Number(sum[i]);
+    return statrtSum
 }
-
 
 // 4. Функция isEvenIndexSumGreater принимает  параметром массив чисел.
 // Если сумма чисел с чётными ИНДЕКСАМИ!!! (0 как чётный индекс) больше
@@ -41,10 +45,25 @@ export function getSum(number: number): number {
 // В противном случае - false.
 
 export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return true
+    let sum1 = 0
+    let sum2 = 0
+    let num = arr
+    for (let i =1; i <num.length; i++) {
+        if (i%2 == 0) {
+            sum1 += num[i]
+        }
+    }
+    for (let i =1; i <num.length; i++) {
+        if (i%2 != 0) {
+            sum2 += num[i]
+        }
+    }
+    if (sum1 > sum2) {
+        return true
+    }
+    else return false
 }
+console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
 
 // 5. Функция getSquarePositiveIntegers принимает параметром массив чисел и возвращает новый массив.
 // Новый массив состоит из квадратов целых положительных чисел, котрые являются элементами исходгого массива.
