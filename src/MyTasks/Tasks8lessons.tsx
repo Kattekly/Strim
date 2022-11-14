@@ -56,26 +56,30 @@ export function getSum(number: number): number {
 // В противном случае - false.
 
 export const isEvenIndexSumGreater = (arr: Array<number>): boolean => {
-    let sum1 = 0
-    let sum2 = 0
-    let num = arr
-    //четные
-    for (let i = 1; i < num.length; i++) {
-        if (i % 2 == 0) {
-            sum1 += num[i]
-        }
-    }
-    //нечетные
-    for (let i = 1; i < num.length; i++) {
-        if (i % 2 != 0) {
-            sum2 += num[i]
-        }
-    }
-    if (sum1 > sum2) {
-        return true
-    } else return false
+    let a = 0
+    let b = 0
+    arr.map((el, ind) => ind % 2 === 0 ? a += el : b += el)
+    return a > b
 }
 console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
+// let sum1 = 0
+// let sum2 = 0
+// let num = arr
+// //четные
+// for (let i = 1; i < num.length; i++) {
+//     if (i % 2 == 0) {
+//         sum1 += num[i]
+//     }
+// }
+// //нечетные
+// for (let i = 1; i < num.length; i++) {
+//     if (i % 2 != 0) {
+//         sum2 += num[i]
+//     }
+// }
+// if (sum1 > sum2) {
+//     return true
+// } else return false
 
 // 5. Функция getSquarePositiveIntegers принимает параметром массив чисел и возвращает новый массив.
 // Новый массив состоит из квадратов целых положительных чисел, котрые являются элементами исходгого массива.
@@ -83,12 +87,12 @@ console.log(isEvenIndexSumGreater([1, 2, 3, 7]))
 
 
 export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
-    const copy = [...array]
-    return copy.filter(i => i % 1 == 0 && i > 0).map(i => i * i)
+    return array.filter(el => el > 0 && el % 1 == 0).map(el => el * el)
 }
 
-console.log(getSquarePositiveIntegers([1, 2, -3]))
-/*copy.filter(el => el > 0 && el%1 == 0).map(el => el*2)*/
+/*array.filter(i => i % 1 == 0 && i > 0).map(i => i * i)*/
+// console.log(getSquarePositiveIntegers([1, 2, -3]))
+/*copy.filter(el => el > 0 && el%1 == 0).map(el => el*el)*/
 
 
 /*
