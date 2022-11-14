@@ -110,13 +110,18 @@ return copy2
 // Попробуйте реализовать функцию без использования перебирающих методов.
 
 export function sumFirstNumbers(N: number): number {
-    let sum = 0
+    if (N === 0) {
+        return 0
+    }
+    else {
+       return N + sumFirstNumbers(N-1)
+    }
+}
+/*   let sum = 0
     for (let i = 0; i <= N; i++) {
         sum += i
     }
-    return sum
-}
-
+    return sum*/
 console.log(sumFirstNumbers(4))
 // ...и "лапку" вверх!!!!
 
